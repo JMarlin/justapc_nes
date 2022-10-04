@@ -1,0 +1,36 @@
+%SIGNAL
+PIN   1 =  CLK 
+PIN  16 =  INVCLK 
+PIN   2 =  LATCH 
+PIN   3 =  NESCLK 
+PIN  19 =  Q0 
+PIN  18 =  Q1 
+PIN  17 =  Q2 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+INVCLK =>
+    !NESCLK
+
+Q0.d  =>
+    LATCH & !Q0
+  # !LATCH & Q0
+
+Q1.d  =>
+    LATCH & Q0 & !Q1
+  # !LATCH & Q1
+  # !Q0 & Q1
+
+Q2.d  =>
+    LATCH & Q0 & Q1 & !Q2
+  # !LATCH & Q2
+  # !Q0 & Q2
+  # !Q1 & Q2
+
+INVCLK.oe  =>
+    1 
+
+%END

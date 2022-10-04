@@ -1,0 +1,39 @@
+Name       NES_SHIFTREG;
+Partno     NES_SHIFTREG;
+Date       08/28/22;
+Revision   01;
+Designer   track_zero;
+Company    Some Fucker;
+Device     g16v8a;
+
+/** Inputs **/
+
+PIN     1   = CLK; 
+PIN     2   = LATCH;
+PIN     3   = R0;
+PIN     4   = R1;
+PIN     5   = R2;
+PIN     6   = R3;
+PIN     7   = R4;
+PIN     8   = R5;
+PIN     9   = COLSENSE;
+
+/** Outputs **/
+
+PIN    19   = Q0;
+PIN    18   = Q1;
+PIN    17   = Q2;
+PIN    16   = Q3;
+PIN    15   = Q4;
+PIN    14   = Q5;
+PIN    13   = Q6;
+
+/** Logic Equations **/
+
+Q0.D = (LATCH & R0) # ((!LATCH) & Q1);
+Q1.D = (LATCH & R1) # ((!LATCH) & Q2);
+Q2.D = (LATCH & R2) # ((!LATCH) & Q3);
+Q3.D = (LATCH & R3) # ((!LATCH) & Q4);
+Q4.D = (LATCH & R4) # ((!LATCH) & Q5);
+Q5.D = (LATCH & R5) # ((!LATCH) & Q6);
+Q6.D = (LATCH & COLSENSE);

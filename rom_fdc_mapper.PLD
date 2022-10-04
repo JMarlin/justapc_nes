@@ -1,0 +1,34 @@
+Name       ROM_FDC_MAPPER;
+Partno     ROM_FDC_MAPPER;
+Date       08/28/22;
+Revision   01;
+Designer   track_zero;
+Company    Some Fucker;
+Device     g16v8a;
+
+/** Inputs **/
+ 
+PIN	 1  = CLK;
+PIN     2  = PRG_CEB;
+PIN 	 3  = NES_RWB;
+PIN     4  = SRAM_CEB;
+PIN	 5  = A11;
+
+/** Outputs **/
+
+PIN    19   = ROM_CEB;
+PIN    18   = FDC_CEB;
+PIN    17   = FDC_WRB;
+PIN	16   = FDC_RDB;
+PIN	15   = FDC_RESET;
+
+
+/** Logic Equations **/
+
+ROM_CEB = PRG_CEB;
+FDC_CEB = !(A11 & (!SRAM_CEB));
+FDC_WRB = !((!FDC_CEB) & (!NES_RWB));
+FDC_RDB = !((!FDC_CEB) & NES_RWB);
+
+FDC_RESET.D = (((!SRAM_CEB) & (!A11)) & (!FDC_RESET)) # ((!((!SRAM_CEB) & (!A11))) & FDC_RESET);
+

@@ -1,0 +1,47 @@
+%SIGNAL
+PIN   5 =  A11 
+PIN   1 =  CLK 
+PIN  18 =  FDC_CEB 
+PIN  16 =  FDC_RDB 
+PIN  15 =  FDC_RESET 
+PIN  17 =  FDC_WRB 
+PIN   3 =  NES_RWB 
+PIN   2 =  PRG_CEB 
+PIN  19 =  ROM_CEB 
+PIN   4 =  SRAM_CEB 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+FDC_CEB =>
+    A11 & !SRAM_CEB
+
+FDC_RDB =>
+    !FDC_CEB & NES_RWB
+
+FDC_RESET.d  =>
+    !A11 & !FDC_RESET & !SRAM_CEB
+  # FDC_RESET & SRAM_CEB
+  # A11 & FDC_RESET
+
+FDC_WRB =>
+    !FDC_CEB & !NES_RWB
+
+ROM_CEB =>
+    PRG_CEB
+
+FDC_CEB.oe  =>
+    1 
+
+FDC_RDB.oe  =>
+    1 
+
+FDC_WRB.oe  =>
+    1 
+
+ROM_CEB.oe  =>
+    1 
+
+%END

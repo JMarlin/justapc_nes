@@ -1,0 +1,15 @@
+C:\Users\jmarlin\Documents\ITS_JUST_A_PC\NES\src\tools\injektor\bin\Debug\net6.0\injektor.exe
+C:\Users\jmarlin\Documents\ITS_JUST_A_PC\NES\src\tools\injektor\bin\Debug\net6.0\injektor.deps.json
+C:\Users\jmarlin\Documents\ITS_JUST_A_PC\NES\src\tools\injektor\bin\Debug\net6.0\injektor.runtimeconfig.json
+C:\Users\jmarlin\Documents\ITS_JUST_A_PC\NES\src\tools\injektor\bin\Debug\net6.0\injektor.dll
+C:\Users\jmarlin\Documents\ITS_JUST_A_PC\NES\src\tools\injektor\bin\Debug\net6.0\injektor.pdb
+C:\Users\jmarlin\Documents\ITS_JUST_A_PC\NES\src\tools\injektor\obj\Debug\net6.0\injektor.csproj.AssemblyReference.cache
+C:\Users\jmarlin\Documents\ITS_JUST_A_PC\NES\src\tools\injektor\obj\Debug\net6.0\injektor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jmarlin\Documents\ITS_JUST_A_PC\NES\src\tools\injektor\obj\Debug\net6.0\injektor.AssemblyInfoInputs.cache
+C:\Users\jmarlin\Documents\ITS_JUST_A_PC\NES\src\tools\injektor\obj\Debug\net6.0\injektor.AssemblyInfo.cs
+C:\Users\jmarlin\Documents\ITS_JUST_A_PC\NES\src\tools\injektor\obj\Debug\net6.0\injektor.csproj.CoreCompileInputs.cache
+C:\Users\jmarlin\Documents\ITS_JUST_A_PC\NES\src\tools\injektor\obj\Debug\net6.0\injektor.dll
+C:\Users\jmarlin\Documents\ITS_JUST_A_PC\NES\src\tools\injektor\obj\Debug\net6.0\refint\injektor.dll
+C:\Users\jmarlin\Documents\ITS_JUST_A_PC\NES\src\tools\injektor\obj\Debug\net6.0\injektor.pdb
+C:\Users\jmarlin\Documents\ITS_JUST_A_PC\NES\src\tools\injektor\obj\Debug\net6.0\injektor.genruntimeconfig.cache
+C:\Users\jmarlin\Documents\ITS_JUST_A_PC\NES\src\tools\injektor\obj\Debug\net6.0\ref\injektor.dll

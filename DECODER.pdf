@@ -1,0 +1,151 @@
+{COMPONENT C:\USERS\JMARLIN\DOCUMENTS\ITS_JUST_A_PC\NES\SRC\DECODER.SYM
+
+ {ENVIRONMENT
+  {PDIFvrev 3.00}
+  {Program "CUPL(WM) Version 5.0a"}
+  {DBtype "Schematic"}
+  {DBvrev 1.01}
+  {DBtime "Tue Aug 30 17:57:57 2022 "}
+  {DBunit "MIL"}
+  {DBgrid 10}
+  {Lyrstr "WIRES" 1 "BUS" 1 "GATE" 2 "IEEE" 2 "PINFUN" 3 "PINNUM" 1 
+          "PINNAM" 6 "PINCON" 4 "REFDES" 2 "ATTR" 6 "SDOT" 1 
+          "DEVICE" 5 "OUTLIN" 5 "ATTR2" 6 "NOTES" 6 "NETNAM" 4 
+          "CMPNAM" 5 "BORDER" 5}
+ }
+
+ {USER
+  {VIEW
+   {Mode SYMB}
+   {Nlst OPEN}
+   {Vw 0 0 2}
+   {Lv 12 2 2 2 0 0 2 2 2 2 0 0 2 1 2 0 0 0 0}
+   {Gs 10 10}
+  }
+ }
+
+ {DISPLAY
+  [Ly "PINNUM"]
+  [Ls "SOLID"][Wd 0]
+  [Ts 15][Tj "LC"][Tr 0][Tm "N"]
+ }
+
+ {SYMBOL
+  {PIN_DEF
+   [Ly "PINCON"]
+   {P D0 {Pt "INPUT"}{Lq 0}{Ploc 100 60}}
+   {P D1 {Pt "INPUT"}{Lq 0}{Ploc 100 40}}
+   {P D2 {Pt "INPUT"}{Lq 0}{Ploc 100 20}}
+   {P Q7 {Pt "I/O"}{Lq 0}{Ploc 280 20}}
+   {P Q6 {Pt "I/O"}{Lq 0}{Ploc 280 40}}
+   {P Q5 {Pt "I/O"}{Lq 0}{Ploc 280 60}}
+   {P Q4 {Pt "I/O"}{Lq 0}{Ploc 280 80}}
+   {P Q3 {Pt "I/O"}{Lq 0}{Ploc 280 100}}
+   {P Q2 {Pt "I/O"}{Lq 0}{Ploc 280 120}}
+   {P Q1 {Pt "I/O"}{Lq 0}{Ploc 280 140}}
+   {P Q0 {Pt "I/O"}{Lq 0}{Ploc 280 160}}
+  }
+
+  {PKG
+   [Ly "REFDES"]
+   [Ts 25][Tj "CB"][Tr 0][Tm "N"]
+   {Rdl 190 190}
+
+   [Ly "PINNUM"]
+   [Ts 15][Tj "RC"]
+   {Pnl 120 70}
+   {Pnl 120 50}
+   {Pnl 120 30}
+   [Ts 15][Tj "LC"]
+   {Pnl 260 30}
+   {Pnl 260 50}
+   {Pnl 260 70}
+   {Pnl 260 90}
+   {Pnl 260 110}
+   {Pnl 260 130}
+   {Pnl 260 150}
+   {Pnl 260 170}
+
+   {Sd A 2 3 4 12 13 14 15 16 17 18 19}
+  }
+
+  {PIC
+   [Ly "GATE"]
+   [Ts 15][Tj "LC"][Tr 0][Tm "N"]
+   {R 130 180 250 0}
+   {L 130 60 100 60}
+   {L 130 40 100 40}
+   {L 130 20 100 20}
+   {L 250 20 280 20}
+   {L 250 40 280 40}
+   {L 250 60 280 60}
+   {L 250 80 280 80}
+   {L 250 100 280 100}
+   {L 250 120 280 120}
+   {L 250 140 280 140}
+   {L 250 160 280 160}
+   [Ly "PINNAM"]
+   [Tj "LC"]
+   {T "D0" 140 60}
+   {T "D1" 140 40}
+   {T "D2" 140 20}
+   [Tj "RC"]
+   {T "Q7" 240 20}
+   {T "Q6" 240 40}
+   {T "Q5" 240 60}
+   {T "Q4" 240 80}
+   {T "Q3" 240 100}
+   {T "Q2" 240 120}
+   {T "Q1" 240 140}
+   {T "Q0" 240 160}
+   [Ly "DEVICE"]
+   [Tj "CT"]
+   {T "G16V8AS" 190 -10}
+  }
+
+  {ATR
+   {IN
+    {Org 100 20}
+    {Ty 255}
+   }
+   {EX
+    [Ly "ATTR2"]
+    [Ts 12][Tj "CT"][Tr 0][Tm "N"]
+    {At PLD C:\USERS\JMARLIN\DOCUMENTS\ITS_JUST_A_PC\NES\SRC\DECODER 190 180}
+   }
+  }
+ }
+
+ {DETAIL
+  {ANNOTATE
+  }
+
+  {NET_DEF
+   {N D0
+   }
+   {N D1
+   }
+   {N D2
+   }
+   {N Q7
+   }
+   {N Q6
+   }
+   {N Q5
+   }
+   {N Q4
+   }
+   {N Q3
+   }
+   {N Q2
+   }
+   {N Q1
+   }
+   {N Q0
+   }
+  }
+
+  {SUBCOMP
+  }
+ }
+}
