@@ -16,32 +16,15 @@ PIN   4 =  SRAM_CEB
 
 %EQUATION
 FDC_CEB =>
-    A11 & !SRAM_CEB
+    1 
 
 FDC_RDB =>
-    !FDC_CEB & NES_RWB
-
-FDC_RESET.d  =>
-    !A11 & !FDC_RESET & !SRAM_CEB
-  # FDC_RESET & SRAM_CEB
-  # A11 & FDC_RESET
+    1 
 
 FDC_WRB =>
-    !FDC_CEB & !NES_RWB
+    1 
 
 ROM_CEB =>
     PRG_CEB
-
-FDC_CEB.oe  =>
-    1 
-
-FDC_RDB.oe  =>
-    1 
-
-FDC_WRB.oe  =>
-    1 
-
-ROM_CEB.oe  =>
-    1 
 
 %END

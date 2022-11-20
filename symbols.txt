@@ -1,0 +1,49 @@
+Modules list:
+-------------
+basic.o:
+    CODE              Offs=000000  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=000000  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000000  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000000  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+    CODE_MAIN         Offs=000000  Size=000710  Align=00001  Fill=0000
+    CMD_TABLE         Offs=000000  Size=000100  Align=00001  Fill=0000
+    KEY_LUT           Offs=000000  Size=000030  Align=00001  Fill=0000
+    VECTORS           Offs=000000  Size=000006  Align=00001  Fill=0000
+
+
+Segment list:
+-------------
+Name                   Start     End    Size  Align
+----------------------------------------------------
+BSS                   000000  000000  000000  00001
+CODE                  000000  000000  000000  00001
+DATA                  000000  000000  000000  00001
+NULL                  000000  000000  000000  00001
+RODATA                000000  000000  000000  00001
+ZEROPAGE              000000  000000  000000  00001
+CODE_MAIN             00E000  00E70F  000710  00001
+CMD_TABLE             00E780  00E87F  000100  00001
+KEY_LUT               00E880  00E8AF  000030  00001
+VECTORS               00FFFA  00FFFF  000006  00001
+
+
+Exports list by name:
+---------------------
+ATTEMPT_READ_SECTOR       00E170  LA    ENTRY                     00E065  LA    
+PRNTCHR                   00E613  LA    
+
+
+Exports list by value:
+----------------------
+ENTRY                     00E065  LA    ATTEMPT_READ_SECTOR       00E170  LA    
+PRNTCHR                   00E613  LA    
+
+
+Imports list:
+-------------
+ATTEMPT_READ_SECTOR (basic.o):
+ENTRY (basic.o):
+PRNTCHR (basic.o):
+

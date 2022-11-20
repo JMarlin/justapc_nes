@@ -26,9 +26,9 @@ PIN	15   = FDC_RESET;
 /** Logic Equations **/
 
 ROM_CEB = PRG_CEB;
-FDC_CEB = !(A11 & (!SRAM_CEB));
-FDC_WRB = !((!FDC_CEB) & (!NES_RWB));
-FDC_RDB = !((!FDC_CEB) & NES_RWB);
+FDC_CEB = 'b'1; /* !(A11 & (!SRAM_CEB)); */
+FDC_WRB = 'b'1; /* !((!FDC_CEB) & (!NES_RWB)); */
+FDC_RDB = 'b'1; /* !((!FDC_CEB) & NES_RWB); */
 
-FDC_RESET.D = (((!SRAM_CEB) & (!A11)) & (!FDC_RESET)) # ((!((!SRAM_CEB) & (!A11))) & FDC_RESET);
+/* FDC_RESET.D = (((!SRAM_CEB) & (!A11)) & (!FDC_RESET)) # ((!((!SRAM_CEB) & (!A11))) & FDC_RESET); */
 

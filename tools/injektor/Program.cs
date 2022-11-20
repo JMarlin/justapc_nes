@@ -1,34 +1,35 @@
 ﻿using System.IO;
 
-using var inRomStream = File.OpenRead("smb3.nes");
 using var outRomStream = File.OpenWrite("basic.nes");
-using var binStream = File.OpenRead("basic.bin");
+using var prgRomStream = File.OpenRead("basic.bin");
+using var chrRomStream = File.OpenRead(@"..\..\..\font.chr");
 
-//Copy over ROM header
-var headerData = new byte[16];
-inRomStream.Read(headerData, 0, 16);
-
-outRomStream.Write(headerData, 0, 16);
-
-//Write 64k of zeroes
-var zeroes = new byte[64 * 1024];
-
-for(var i = 0; i < 3; i++)
-    outRomStream.Write(zeroes, 0, 64 * 1024);
+//Write ines header
+outRomStream.Write(new byte[16] {
+    0x4E, 0x45, 0x53, 0x1A, //'NES' magic number
+    0x02, // Size of PRG rom x16k
+    0x01, // Size of CHR rom x8k
+    0x01, // Flags 6 - Vertical mirroring, no SRAM, no Trainer, do not ignore mirroring, mapper 0 
+    0x00, // Flags 7 - Mapper 0
+    0x00, // Flags 8 - no PRG RAM
+    0x00, // Flags 9 - NTSC
+    0x10, // Flags 10 - NTSC, no PRG RAM
+    0x00, 0x00, 0x00, 0x00, 0x00 // PADDING
+}, 0, 16);
 
 //Write the content of our assembled binary
-var binContent = new byte[64 * 1024];
-binStream.Read(binContent, 0, 64 * 1024);
-outRomStream.Write(binContent, 0, 64 * 1024);
-binStream.Close();
+var binContent = new byte[32 * 1024];
+prgRomStream.Seek(32 * 1024, SeekOrigin.Begin);
+prgRomStream.Read(binContent, 0, 32 * 1024);
+outRomStream.Write(binContent, 0, 32 * 1024);
+prgRomStream.Close();
 
 //Write the CHR content of the smb3 ROM
-var chrContent = new byte[128 * 1024];
-inRomStream.Seek(256 * 1024, SeekOrigin.Current);
-inRomStream.Read(chrContent, 0 , 128 * 1024);
-outRomStream.Write(chrContent, 0, 128 * 1024);
+var chrContent = new byte[8 * 1024];
+chrRomStream.Read(chrContent, 0 , 8 * 1024);
+outRomStream.Write(chrContent, 0, 8 * 1024);
 
 outRomStream.Close();
-inRomStream.Close();
+outRomStream.Close();
 
 
